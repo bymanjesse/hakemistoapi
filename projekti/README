@@ -1,0 +1,53 @@
+Jesse Byman, Tomi Kalmari REST API projekti
+
+Ohessa lyhyt kuvaus APIn toiminnallisuudesta, valitettavasti APIa käyttävää käyttöliittymää ei keretty valmistamaan.
+
+Projektin tarkoituksena oli luoda videopelihakemisto josta löytyy videopelejä nimillä sekä niille kuuluva hinta. APIn
+avulla on myös mahdollisuus tilata pelejä ja tilauksia voidaan myös tarkistella omana kategorianaan. Hakemiston ja tilausten
+lisäksi järjestelmään voidaan luoda käyttäjiä sähköpostin ja salasanan avulla, salasana salataan bcryptjs avulla.
+API on rakennettu PHPStormissa NodeJs, Express, MongoDB ja Mongoosen avulla.
+Testauksessa käytimme Postamania.
+
+API käynnistetään nodemon server.js palikan avulla jotta sitä on helppo työstää ilman jatkuvaa uudelleen käynnistelyä.
+
+Itse videopelihakemistolla on käytössä GET, POST, PATCH ja DELETE metodit. GET metodia voidaan käyttää myös IDn avulla
+jolloin hakua voidaan tarkentaa.
+
+Toiminnot testausta ja käyttöä varten:
+
+GET "http://localhost:5000/games/" - palauttaa listan peleistä, niiden hinnoista, IDn sekä linkin peliin sen uniikin IDn kautta.
+
+POST "http://localhost:5000/games/" - voidan lisätä listaan pelejä json muodossa { "name": "Tähän peli", "price": "Tähän hinta" }
+
+GET "http://localhost:5000/games/pelinIdTähän" - Pelin IDllä voidaan hakea vain yhtä peliä listasta kerrallaan.
+
+PATCH "http://localhost:5000/games/pelinIdTähän" - voidaan päivittää pelejä muodossa { "propName": "Tähän nimi", "value": "Tähän hinta"}
+
+DELETE "http://localhost:5000/games/pelinIdTähän" - pelin IDn avulla voidaan poistaa listasta pelejä.
+
+
+Pelien tilauslistalla on käytössä toiminnot
+
+GET "http://localhost:5000/orders/" - haetaan lista kaikista tilauksista.
+
+POST "http://localhost:5000/orders/" - voidaan syöttää uusi tilaus muodossa { "productId": "Tähän tilattavan ID", "quantity": "Tähän quantity, defaulttina 1"}
+
+GET "http://localhost:5000/orders/tähänTilauksenId" - tietty tilaus voidaan poimia tarkasteltavaksi sen IDllä.
+
+DELETE "http://localhost:5000/orders/tähänTilauksenId" - tilauksen IDllä voidaan myös poistaa haluttu tilaus tietokannasta.
+
+
+Käyttäjälistalla käytössä olevat toiminnot
+
+POST "http://localhost:5000/user/signup" - voidaan rekisteröidä käyttäjä muodossa { "email": "Tähän meili", "password": "Tähän passu"}
+                                           Käyttäjän rekisteröinnissä on validointi sähköpostiosoitetta varten ja duplikaattien esto, salasana hashataan
+                                           rekisteröinnin jälkeen Bcryptjs avulla. Testi käyttäjän on email: test@test.com password: tester
+
+POST "http://localhost:5000/user/login" - kirjautumulla muodossa { "email": "Tähän meili", "password": "Tähän passu"} voidaan kirjautua sisään ja
+                                          saada tokeni auktorointiin. Testi käyttäjän on email: test@test.com password: tester
+
+DELETE "http://localhost:5000/user/"tähänKäyttäjäId" - käyttäjä voidaan poistaa muodossa {"email": "tähän meili", "password": "Tähän salasana"}
+
+
+APIssa on otettu huomioon virheet ja niitä vastaamaan on laitettu oikean protokollan mukaiset virhekoodit.
+Jos APIn kanssa ilmenee ongelmia, otathan yhteyttä jesseb@metropolia.fi!
