@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f08d9b04-ed5f-4411-b919-5a58d2ab4cfd" name="Default Changelist" comment="" />
+    <list default="true" id="f08d9b04-ed5f-4411-b919-5a58d2ab4cfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +217,7 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -264,6 +267,7 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -275,17 +279,6 @@
             <path>
               <item name="rest-api-projekti" type="b2602c69:ProjectViewProjectNode" />
               <item name="hakemistoapi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rest-api-projekti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hakemistoapi" type="462c0819:PsiDirectoryNode" />
-              <item name="projekti" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rest-api-projekti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hakemistoapi" type="462c0819:PsiDirectoryNode" />
-              <item name="projekti" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -356,12 +349,12 @@
       <workItem from="1538939160072" duration="3220000" />
       <workItem from="1539005378611" duration="10313000" />
       <workItem from="1539185865780" duration="49457000" />
-      <workItem from="1539258037353" duration="1243000" />
+      <workItem from="1539258037353" duration="1491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80862000" />
+    <option name="totallyTimeSpent" value="81110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
